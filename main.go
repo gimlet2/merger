@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-func merge(a map[string]interface{}, b map[string]interface{}) (map[string]interface{}, error) {
+func Merge(a map[string]interface{}, b map[string]interface{}) (map[string]interface{}, error) {
 	mType := reflect.TypeOf(a)
 	for k, v := range b {
 		_, p := a[k]
