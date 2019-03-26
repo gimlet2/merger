@@ -16,7 +16,7 @@ func Merge(a map[string]interface{}, b map[string]interface{}) (map[string]inter
 			a[k] = v
 		}
 		if reflect.TypeOf(v) == mType && reflect.TypeOf(a[k]) == mType {
-			n, e := merge(a[k].(map[string]interface{}), v.(map[string]interface{}))
+			n, e := Merge(a[k].(map[string]interface{}), v.(map[string]interface{}))
 			if e != nil {
 				return nil, e
 			}
